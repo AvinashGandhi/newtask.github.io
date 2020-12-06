@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HomePage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+</head>
+<style>
+#mobimg{
+    display: none;
+}
+    #bgimg {
+        background-image: url("images/Banner.png");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        object-fit: cover;
+        
+    }
+
+    .form-group {
+        margin-bottom: 0.3rem;
+    }
+
+    .btn {
+        background-color: #8ACEF3;
+
+    }
+    .formcard{
+        width: 354px;
+        padding: 20px 0px 20px 27px;
+    margin-right: 174px;
+    margin-top: 35px;
+    /* justify-content: center; */
+    border-radius: 18px;
+    box-shadow: 17px 5px 35px -12px #868484;
+    }
+    @media(max-width:580px){
+        #logo{
+            position: absolute;
+    top: 2px;
+    width: 127px;
+    height: 40px;
+    left: 13px;
+        }
+        #bgimg{
+            display: none;
+
+        }
+        #mobimg{
+            display: table-header-group;
+            width: 100%;
+    position: relative;
+    z-index: -1;
+        }
+        .formcard{
+           width: 100%;
+            padding: 26px;
+            margin: 0;
+            border-top-left-radius: 28px;
+            border-top-right-radius: 28px;
+    position: absolute;
+    top: 276px;
+    bottom: auto;
+    
+        }
+        footer{
+            display: none;
+        }
+    }
+
+</style>
+
+<body>
+    <div>
+        <img src="images/logo.png" id="logo">
+        <img src="images/Banner.png" id="bgimg">
+        <img src="images/mobilebanner.png" id="mobimg">
+    </div>
+
+    <div class="card col-sm-12 float-right formcard">
+
+
+        <!-----------------------Signup form-------------------->
+        <div class="signupform">
+            <div class="col-lg-12">
+                <h3 class="headingtext">Hello,</h3>
+                <span style="font-size: 14px;font-weight: 700;">Sign up to begin!</span>
+
+            </div>
+            <form>
+
+                <div class="form-group col-lg-11">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter Your Name" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="Enter Company Name" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Mobile Number</label>
+                    <input type="text" placeholder="Enter Mobile Number" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="Enter Email ID" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Email OTP</label>
+                    <input type="text" placeholder="Enter OTP" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11 mt-3">
+                    <button class="btn btn-block btn-lg text-white" type="button">Sign Up</button>
+                </div>
+            </form>
+            <div class="mt-2 text-center" style="font-size: 12px;
+            color: #888D93;">
+                <span style="letter-spacing: 0.5px;">Already a member?&nbsp;<a href="javascript:void(0)"
+                        class="loginbutton">Log In</a></span>
+            </div>
+        </div>
+
+        <!--------------------signup form ends----------------------->
+
+        <!---------------------login form starts------------------------->
+        <div class="loginform modify">
+            <div class="col-lg-11 d-flex justify-content-center">
+                <h3 class="text-center logintext">LOG IN</h3>
+            </div>
+            <form>
+               
+                <div class="form-group col-lg-11">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="Enter Email ID" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Password</label>
+                    <input type="Password" placeholder="Enter Password" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Email OTP</label>
+                    <input type="text" placeholder="Enter OTP" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11 mt-3">
+                    <button class="btn btn-block btn-lg text-white" type="button">Log In</button>
+                </div>
+            </form>
+            <div class="col-lg-11 d-flex justify-content-between">
+                <div class="round">
+                    <input type="checkbox" id="checkbox" />
+                    <label for="checkbox"></label>&nbsp;<span style="font-size: 13px;">Remember Me</span>
+                </div>
+                <a href="javascript:void(0);" class="forgotpassword float-right" style="font-size: 13px;">Forgot Password?</a>
+
+            </div>
+            <div class="mt-2 text-center" style="font-size: 12px;
+            color: #888D93;">
+                <span style="letter-spacing: 0.5px;">Don't have an account?&nbsp;<a href="javascript:void(0)"
+                        class="signinbutton">Sign Up</a></span>
+            </div>
+        </div>
+
+
+
+        <!----------------------login form ends------------------>
+
+
+        <!-------------------------Forgot form starts---------------->
+
+
+        <div class="forgotpwdpage modify">
+            <div class="col-lg-11 d-flex justify-content-center">
+                <h3 class="text-center forgottext">FORGOT PASSWORD ?</h3>
+            </div>
+            <form>
+            
+                <div class="form-group col-lg-11">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="Enter Email ID" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>New Password</label>
+                    <input type="Password" placeholder="Enter Password" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11">
+                    <label>Email OTP</label>
+                    <input type="text" placeholder="Enter OTP" class="curvedborder form-control" />
+                </div>
+                <div class="form-group col-lg-11 mt-3">
+                    <button class="btn btn-block btn-lg text-white" type="button">Log In</button>
+                </div>
+            </form>
+            <div class="col-lg-11 d-flex justify-content-between">
+                <div class="round">
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1" ></label>&nbsp;<span style="font-size: 13px;">Remember Me</span>
+                </div>
+            
+
+            </div>
+            <div class="mt-2 text-center" style="font-size: 12px;
+            color: #888D93;">
+                <span>Don't have an account?&nbsp;<a href="javascript:void(0)"
+                        class="signinbutton">Sign Up</a></span>
+            </div>
+        </div>
+
+        <!---------------------------Forgot form ends------------------>
+
+
+    </div>
+
+
+
+    <footer>
+		<p class="footertext"><a>About Us</a>&emsp;|&emsp;<a>Terms & Conditions</a>&emsp;|&emsp;<a>Privacy Policy</a></p>
+	</footer>
+
+
+    
+    <script>
+        $(document).ready(function () {
+            $(".loginbutton").click(function () {
+                $(".signupform").addClass("modify");
+                $(".loginform").removeClass("modify");
+            }),
+            $(".signinbutton").click(function(){
+                $(".signupform").removeClass("modify");
+                $(".loginform,.forgotpwdpage").addClass("modify");
+            }),
+            $(".forgotpassword").click(function(){
+                $(".forgotpwdpage").removeClass("modify");
+                $(".loginform").addClass("modify");
+            });
+        });
+    </script>
+</body>
+
+</html>

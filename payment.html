@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+</head>
+<style>
+    /* .btncolor {
+        background-color: #BDC3CA;
+        color: #fff;
+    } */
+.paybtn{
+    width: 121px;
+    border-radius: 8px;
+    background-color: #8ACEF3;
+    font-weight: bold;
+}
+    .btnclass .col-lg-2 {
+        max-width: 11.666667% !important;
+    }
+
+    .btnclass a {
+        font-size: 13px;
+    }
+
+    .shadowinput input {
+        box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.15);
+    }
+
+    .paymenthead {
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 31px;
+        text-decoration-line: underline;
+        color: #888D93;
+    }
+
+    .cardgrey .row {
+        margin-top: 7px;
+    }
+
+    form {
+        font-size: 14px;
+    }
+
+    form .curvedborder::placeholder {
+        font-size: 13px;
+        color: #BDC3CA;
+    }
+
+    select.curvedborder {
+        font-size: 13px;
+        color: #BDC3CA;
+    }
+    .amtlabel{
+        margin-top: 10px;
+    }
+    .card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 3px 7px 3px #d8d3d3;
+}
+
+    @media(max-width:580px) {
+        .paymenthead {
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div id="myHeader">
+        <header>
+            <nav style="box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);">
+                <ul class="list-unstyled d-flex justify-content-between align-items-center resnav" style="padding: 10px;">
+                    <li style="padding-left: 42px;" class="fullwidthli">
+                        <a href="dashboard.html"><img src="images/Logo.png" class="applogo" style="width: 121px;"></a>
+                        <a href="#" class="reslogout">Logout</a>
+                    </li>
+                    <li><span class="text-center blncredit">Balance Credits:&nbsp;<strong>&#x20B9;200</strong></span></li>
+                    <li style="padding-right: 42px;" class="username"><span style="font-size: 13px;">Hi,&nbsp;<span><a href="profile.html" class="uname">Heti</a></span>&emsp;<span class="text-dark pipedisplay">|</span>&emsp;<a href="#" class="desklogout">Logout</a></li>
+    
+                </ul>
+            </nav>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bgcolor">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="dashboard.html">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="createjob.html">Create Job</a>
+				</li>
+				
+				<li class="nav-item">
+				  <a class="nav-link " href="applications.html">Applications</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="payment.html">Payment</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link " href="reports.html">Reports</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link " href="myorders.html">My Orders</a>
+				  </li>
+			  </ul>
+			 
+			</div>
+		  </nav>
+        <div class="container-fluid">
+            <div class="col-lg-12 btnscroll">
+                <div class="row justify-content-end btnclass mr-1">
+                    <div style="max-width: 13.666667% !important;margin-right: 10px;">
+                        <a class="btn btn-block btncolor" href="createjob.html"><i class="fa fa-plus"></i>&nbsp;Creata
+                            A Job</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="btn btn-block btncolor" href="applications.html">Applications</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="btn btn-block activebtn" href="payment.html">Payment</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="btn btn-block btncolor" href="reports.html">Reports</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="btn btn-block btncolor" href="myorders.html">My Orders</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+       
+
+        <div class="cardgrey cardscroll col-lg-12 mt-4">
+            <div class=" d-flex justify-content-center">
+                <div class="card col-lg-5 col-11 mt-3 mb-5" style="padding:2rem;">
+                    <span class="paymenthead col-lg-12">MAKE PAYMENT</span>
+                    <div class="col-lg-12">
+                        <form>
+                       
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <label class="amtlabel">Amount (Inclusive of GST)</label>
+                                </div>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control curvedborder"
+                                        placeholder="Max Amount Payable Is ₹1000">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5">
+                                <button class="btn btn-sm btn-block text-white paybtn" type="submit">Pay</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="d-flex justify-content-center">
+        <div class="innerbtn">
+            <span>
+                <i class="fa fa-angle-up"></i>
+            </span>
+        </div> -->
+        <footer>
+            <p class="footertext"><a href="aboutus.html">About Us</a>&emsp;|&emsp;<a>Terms & Conditions</a>&emsp;|&emsp;<a>Privacy Policy</a></p>
+        </footer>
+
+
+        <script>
+            $(document).ready(function () {
+                $('.innerbtn').click(function () {
+                    $('footer').fadeToggle('slow');
+                    $("i", this).toggleClass("fa-angle-up fa-angle-down");
+                });
+            });
+        </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+</head>
+<style>
+    /* .btncolor {
+        background-color: #BDC3CA;
+        color: #fff;
+    } */
+    .paybtn {
+        width: 121px;
+        border-radius: 8px;
+        background-color: #8ACEF3;
+        font-weight: bold;
+    }
+
+    .btnclass .col-lg-2 {
+        max-width: 11.666667% !important;
+    }
+
+    .btnclass a {
+        font-size: 13px;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .shadowinput input {
+        box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.15);
+    }
+
+    .paymenthead {
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 31px;
+        text-decoration-line: underline;
+        color: #888D93;
+    }
+
+    .cardgrey .row {
+        margin-top: 7px;
+    }
+
+    form {
+        font-size: 14px;
+    }
+
+    form .curvedborder::placeholder {
+        font-size: 13px;
+        color: #BDC3CA;
+    }
+
+    select.curvedborder {
+        font-size: 13px;
+        color: #BDC3CA;
+    }
+
+    .aboutcontent {
+        font-size: 13px;
+        color: #888D93;
+    }
+
+    .aboutcontent strong {
+        color: #4d4d4d !important;
+        font-weight: bold !important;
+    }
+
+    @media(max-width:580px) {
+        .paymenthead {
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    
+    <div class="container-fluid pt-2">
+        <a href="dashboard.html"><img src="images/Logo.png" class="applogo" style="width: 121px;"></a>
+
+        <div class="cardgrey  col-lg-12 mt-4">
+            <div class=" d-flex justify-content-center">
+                <div class="card col-lg-10 col-11 mt-3 mb-5 " style="padding:2rem;">
+                    <span class="paymenthead col-lg-12 animate__animated animate__fadeInUp animated ">About Us</span>
+                    <div class="col-lg-12 aboutcontent ">
+                        <p class="animate__animated animate__fadeInUp animated animate__delay-1s">
+                            <strong>Buddy Job</strong> is a young and quickly growing online employment solution
+                            connecting people who are seeking jobs with employers who are in need of great talent. We
+                            aim to become a global provider and provide a complete package of job search, career
+                            management, recruitment and other related services.</p>
+
+                        <p class="animate__animated animate__fadeInUp animated animate__delay-1s"><strong>Innovation, ease, accessibility, and affordability is at the heart of our success and
+                                growth.</strong></p>
+<div class="d-flex animate__animated animate__fadeInUp animated animate__delay-1s">
+    <span>-</span>&emsp;<p>We are improving the way people can apply for jobs.</p>
+</div>
+                        
+                       <div class=" d-flex animate__animated animate__fadeInUp animated animate__delay-1s">
+                        <span>-</span>&emsp;<p>We are helping recruiters in hiring the best fit for their organization
+                            by matching the candidate profile with their requirement to the closest possible extreme.
+                        </p>
+                       </div>
+                        <div class="d-flex animate__animated animate__fadeInUp animated animate__delay-1s">
+                            <span class="">-</span>&emsp;<p>We are working hard towards bringing all job opportunities and candidates
+                                to one common platform, thereby acting as a bridge between them, to help them connect
+                                seamlessly.</p>
+                        </div>
+                        
+
+                        <p class="animate__animated animate__fadeInUp animated animate__delay-1s">Buddy Job is literally your job buddy as it helps people find the right jobs and helps
+                            companies find the right people. </p>
+
+                        <p class="animate__animated animate__fadeInUp animated animate__delay-1s"><strong>Why Choose Us?</strong></p>
+                        <p class="animate__animated animate__fadeInUp animated animate__delay-1s">If you are a job seeker, you can get access to hundreds and thousands of job opportunities
+                            across industries, experience levels, and geographies. As you complete filling up your
+                            profile on Buddy Job, our team continues to search for relevant jobs for you. In just a
+                            click, your application reaches multiple recruiters in one go, saving your time and effort
+                            towards filling up multiple applications for the same position in different companies.</p>
+
+                        <p class="animate__animated animate__fadeInUp  animate__delay-1s">If you are a recruiter, we will do the initial rounds of screening for you and narrow down
+                            your search funnel, so you get only those candidate profiles that are an exact match to your
+                            requirement. This not only saves your time of screening irrelevant profiles, but also helps
+                            you hire the right talent in way less costs.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="d-flex justify-content-center">
+        <div class="innerbtn">
+            <span>
+                <i class="fa fa-angle-up"></i>
+            </span>
+        </div> -->
+    <footer>
+        <p class="footertext"><a href="aboutus.html">About Us</a>&emsp;|&emsp;<a>Terms & Conditions</a>&emsp;|&emsp;<a>Privacy Policy</a>
+        </p>
+    </footer>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.innerbtn').click(function () {
+                $('footer').fadeToggle('slow');
+                $("i", this).toggleClass("fa-angle-up fa-angle-down");
+            });
+        });
+    </script>
+
+
+</body>
+
+
+</html>

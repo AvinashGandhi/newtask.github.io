@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>DashboardPage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/appstyle.css">
+	<link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<link type="text/css"
+		href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css"
+		rel="stylesheet" />
+
+	<script src="bootstrap\js\bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css">
+	<script type="text/javascript" charset="utf8" src="DataTables/datatables.min.js"></script>
+
+
+</head>
+<style>
+	.btnclass .col-lg-2 {
+		max-width: 11.666667%;
+	}
+
+	.btnclass {
+		justify-content: flex-end;
+	}
+
+	.btnclass a {
+		font-size: 13px;
+	}
+
+	.shadowinput input {
+		box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.15);
+	}
+</style>
+
+<body>
+	<div id="myHeader">
+		<header>
+			<nav style="box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);">
+				<ul class="list-unstyled d-flex justify-content-between align-items-center resnav"
+					style="padding: 10px;">
+					<li style="padding-left: 42px;" class="fullwidthli">
+						<a href="dashboard.html"><img src="images/Logo.png" class="applogo" style="width: 121px;"></a>
+						<a href="#" class="reslogout">Logout</a>
+					</li>
+					<li><span class="text-center blncredit">Balance Credits:&nbsp;<strong>&#x20B9;200</strong></span>
+					</li>
+					<li style="padding-right: 42px;" class="username"><span style="font-size: 13px;">Hi,&nbsp;<span><a
+									href="profile.html" class="uname">Heti</a></span>&emsp;<span
+								class="text-dark pipedisplay">|</span>&emsp;<a href="#" class="desklogout">Logout</a></li>
+
+				</ul>
+			</nav>
+		</header>
+		<nav class="navbar navbar-expand-lg navbar-light bgcolor">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="dashboard.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="createjob.html">Create Job</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link " href="applications.html">Applications</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="payment.html">Payment</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="reports.html">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="myorders.html">My Orders</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="col-lg-12 btnscroll">
+				<div class="row justify-content-end btnclass mr-1">
+					<div style="max-width: 13.666667% !important;    margin-right: 10px;">
+						<a class="btn btn-block btncolor" href="createjob.html"><i class="fa fa-plus"></i>&nbsp;Creata
+							A Job</a>
+					</div>
+					<div class="col-lg-2">
+						<a class="btn btn-block btncolor" href="applications.html">Applications</a>
+					</div>
+					<div class="col-lg-2">
+						<a class="btn btn-block btncolor" href="payment.html">Payment</a>
+					</div>
+					<div class="col-lg-2">
+						<a class="btn btn-block btncolor" href="reports.html">Reports</a>
+					</div>
+					<div class="col-lg-2">
+						<a class="btn btn-block btncolor" href="myorders.html">My Orders</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+
+
+
+		<div class="cardgrey col-lg-12 mt-4">
+			<div class="row pt-4">
+				<div class="col-lg-6 headpadding">
+					<h5 style="color: #888D93;"><ins>DASHBOARD</ins></h5>
+				</div>
+				<div class="col-lg-6 col-sm-12 shadowinput inputlist">
+					<div class="d-flex">
+						<div class="inputfild">
+							<select class="form-control" style="box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.15);">
+								<option selected>Select</option>
+								<option>Today</option>
+								<option>Yesterday</option>
+								<option>This Month</option>
+								<option>Last Month</option>
+								<option>Last 6 Months</option>
+								<option>This Year</option>
+								<option>Last Year</option>
+							</select>
+						</div>
+						<div class="inputfild">
+							<input type="input" class="form-control datepicker" placeholder="Start Date">
+						</div>
+						<div class="inputfild">
+							<input type="input" class="form-control datepicker" placeholder="End Date">
+						</div>
+
+					</div>
+					<div class="inputfild searchmobile">
+						<input type="text" id="searchbox" class="form-control" placeholder="Search"
+							style="border-radius:40px;">
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="mt-5 tablescroll">
+				<div class="col-lg-12">
+					<form id="frm-example">
+						<table id="myTable" class="display table table-bordered text-center" cellpadding="0" cellspacing="0">
+							<thead>
+								<tr>
+									<th><input name="select_all" value="1" id="example-select-all" type="checkbox" />
+									</th>
+									<th>Company Name</th>
+									<th>Job Title</th>
+									<th>Experience (Yrs)</th>
+									<th>City</th>
+									<th>State</th>
+									<th>Date Posted</th>
+									<th>Last Updated</th>
+									<th>Actions</th>
+									<th>Applications</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>2 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><img src="" class="compimg">&emsp;HCl</td>
+									<td>CEO</td>
+									<td>5 Years</td>
+									<td>Bangalore</td>
+									<td>Karnataka</td>
+									<td>19 Nov 2020</td>
+									<td>19 Nov 2020</td>
+									<td>
+
+									</td>
+									<td></td>
+								</tr>
+
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="d-flex justify-content-center">
+			<div class="innerbtn">
+				<span>
+					<i class="fa fa-angle-up"></i>
+				</span>
+			</div> -->
+		<footer>
+			<p class="footertext"><a href="aboutus.html">About Us</a>&emsp;|&emsp;<a>Terms &
+					Conditions</a>&emsp;|&emsp;<a>Privacy Policy</a></p>
+		</footer>
+
+
+
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function () {
+
+				var table = $('#myTable').DataTable({
+					"scrollX":true,
+					"scrollY": "220px",
+					"scrollCollapse": true,
+					"autoWidth": false,
+					"bSort": true,
+					"aSort": true,
+					"pageLength": 100,
+					"paging": true,
+					"pagingType": "full_numbers",
+					'columnDefs': [{ 'orderable': false, 'targets': 0 }], // hide sort icon on header of first column
+					'aaSorting': [[0, 'asc']],
+					'order': [],
+				
+					language: { search: "" },
+					// 'columnDefs': [{
+					// 	'targets': 0,
+					// 	'searchable': false,
+					// 	'orderable': false,
+					// 	'className': 'dt-body-center',
+					// 	'render': function (data, type, full, meta) {
+					// 		return '<input type="checkbox" name="id[]" value="'
+					// 			+ $('<div/>').text(data).html() + '">';
+					// 	}
+					// }],
+					"aoColumns": [
+						{
+						"mData": null,
+						"bSortable": false,
+						"mRender": function (data, type, full, meta) {
+							return '<input type="checkbox" name="id[]" value="'
+								+ $('<div/>').text(data).html() + '">';
+					}
+					}, {
+
+						"mData": 2
+					}, {
+
+						"mData": 3
+					}, {
+
+						"mData": 4
+					}, {
+
+						"mData": 5
+					},
+					{
+						"mData": 6
+					},
+					{
+						"mData": 7
+					},
+					{
+						"mData": 8
+					},
+					{
+
+						"mData": null,
+						"bSortable": false,
+						"mRender": function (data, type, full) {
+							return '<div class="d-flex justify-content-center"><i class="fa fa-pencil"></i>' + '&emsp;' + '<i class="fa fa-trash"></i>' + '&emsp;' + '<i class="ti-files"></i>' + '</div>';
+
+						}
+					},
+
+					{
+						"mData":null,
+						"bSortable": true,
+						"mRender": function (data, type, full) {
+							return '<b class="text-primary">32</b>&nbsp;<i class="ti-eye"></i>';
+						}
+					}
+
+
+					]
+
+				});
+
+				// Handle click on "Select all" control
+
+
+
+				// Handle click on "Select all" control
+				$('#example-select-all').on('click', function () {
+					// Check/uncheck all checkboxes in the table
+					var rows = table.rows({ 'search': 'applied' }).nodes();
+					$('input[type="checkbox"]', rows).prop('checked', this.checked);
+				});
+
+				// Handle click on checkbox to set state of "Select all" control
+				$('#myTable tbody').on('change', 'input[type="checkbox"]', function () {
+					// If checkbox is not checked
+					if (!this.checked) {
+						var el = $('#example-select-all').get(0);
+						// If "Select all" control is checked and has 'indeterminate' property
+						if (el && el.checked && ('indeterminate' in el)) {
+							// Set visual state of "Select all" control 
+							// as 'indeterminate'
+							el.indeterminate = true;
+						}
+					}
+				});
+
+				$('#frm-example').on('submit', function (e) {
+					var form = this;
+
+					// Iterate over all checkboxes in the table
+					table.$('input[type="checkbox"]').each(function () {
+						// If checkbox doesn't exist in DOM
+						if (!$.contains(document, this)) {
+							// If checkbox is checked
+							if (this.checked) {
+								// Create a hidden element 
+								$(form).append(
+									$('<input>')
+										.attr('type', 'hidden')
+										.attr('name', this.name)
+										.val(this.value)
+								);
+							}
+						}
+					});
+
+					// FOR TESTING ONLY
+
+					// Output form data to a console
+					$('#example-console').text($(form).serialize());
+					console.log("Form submission", $(form).serialize());
+
+					// Prevent actual form submission
+					e.preventDefault();
+				});
+				$(' #myTable_filter input').addClass('.form-control');
+				$(' #myTable_filter input').removeAttr('type');
+			});
+		</script>
+		<script>
+			
+			$(function () {
+				$(".datepicker").datepicker();
+			});
+		</script>
+		<script>
+			$(document).ready(function () {
+				var dataTable = $('#myTable').dataTable();
+				$("#searchbox").keyup(function () {
+					dataTable.fnFilter(this.value);
+				});
+				$('.innerbtn').click(function () {
+					$('footer').fadeToggle('slow');
+					$("i", this).toggleClass("fa-angle-up fa-angle-down");
+				});
+			});
+
+		</script>
+
+		<script>
+			window.onscroll = function () { myFunction() };
+
+			var header = document.getElementById("myHeader");
+			var sticky = header.offsetTop;
+
+			function myFunction() {
+				if (window.pageYOffset > sticky) {
+					header.classList.add("sticky");
+				} else {
+					header.classList.remove("sticky");
+				}
+			}
+		</script>
+
+</body>
+
+
+</html>
